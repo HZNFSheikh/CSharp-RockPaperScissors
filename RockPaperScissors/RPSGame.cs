@@ -31,7 +31,7 @@ namespace RockPaperScissors
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("This is Rock Paper Scissors. To play a round pick from: Rock, Paper or Scissors");
-            Console.ResetColor();
+
         }
 
 
@@ -55,7 +55,7 @@ namespace RockPaperScissors
         public void winCondition()
         {
 
-            if (playerInput == "PAPER")
+            if (playerMove == "PAPER")
             {
                 if (cpuMove == 1)
                 {
@@ -63,7 +63,7 @@ namespace RockPaperScissors
                 }
                 else if (cpuMove == 2)
                 {
-                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.BackgroundColor = ConsoleColor.Magenta;
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Winner! Computer picked Rock");
                     player1Score.Add(1);
@@ -82,7 +82,7 @@ namespace RockPaperScissors
 
             }
 
-            else if (playerInput == "SCISSORS")
+            else if (playerMove == "SCISSORS")
             {
                 if (cpuMove == 1)
                 {
@@ -90,7 +90,7 @@ namespace RockPaperScissors
                 }
                 else if (cpuMove == 2)
                 {
-                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.BackgroundColor = ConsoleColor.Magenta;
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Winner! Computer picked Paper");
                     player1Score.Add(1);
@@ -110,7 +110,7 @@ namespace RockPaperScissors
                 }
             }
 
-            else if (playerInput == "ROCK")
+            else if (playerMove == "ROCK")
             {
                 if (cpuMove == 1)
                 {
@@ -118,7 +118,7 @@ namespace RockPaperScissors
                 }
                 else if (cpuMove == 2)
                 {
-                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.BackgroundColor = ConsoleColor.Magenta;
                     Console.ForegroundColor = ConsoleColor.White;
                     Console.WriteLine("Winner! Computer picked Scissors");
                     player1Score.Add(1);
@@ -144,16 +144,7 @@ namespace RockPaperScissors
             }
             Console.WriteLine("Press Enter for the next round");
             Console.ReadLine();
-            if (player1Score.Count < 5 || cpuScore.Count < 5)
-            {
-                Console.WriteLine("Rock, Paper or Scissors?");
-            }
-            else
-            {
-                Console.WriteLine("Thanks for playing. Game Over. Press any key to exit");
-                Console.ReadKey();
-                return;
-            }
+          
 
 
         }

@@ -12,7 +12,7 @@ namespace RockPaperScissors
         List<int> cpuScore = new List<int>();
 
         int cpuMove;
-        string playerInput;
+        string playerMove;
 
 
         public RPSGame()
@@ -37,7 +37,7 @@ namespace RockPaperScissors
 
         public void PlayerMove()
         {
-            playerInput = Console.ReadLine().ToUpper();
+            playerMove = Console.ReadLine().ToUpper();
 
 
 
